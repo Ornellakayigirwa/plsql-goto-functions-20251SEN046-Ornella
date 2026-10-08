@@ -1,33 +1,48 @@
 # PL/SQL GOTO Statements and Functions: Individual Assignment III
 
-**Student:** Ornella (ID 20251SEN046)
+**Names:** Kayigirwa Ornella 
 
-## Project idea
-An employee payroll database with two tables:
-- `departments` (`dep_id`, `dep_name`)
-- `employees` (`emp_id`, `first_name`, `last_name`, `salary`, `hire_date`, `dep_id`)
+**ID:** 20251SEN046
 
-`salary` is the **monthly** salary. The data includes deliberate invalid rows for the validator to catch: one employee with a salary of 0 (Grace) and one with no department (Zoe).
+## Overview
+Database for the payroll of the employees containing two tables
+- Departments
+- Employees
 
-## Repository structure
-- `00_setup/create_tables.sql`: creates and fills the tables
-- `01_goto/`: A1 number classifier, A2 salary review, A3 illegal GOTO and fix, A4 rewrite without GOTO
-- `02_functions/`: B1 annual salary, B2 years of service, B3 tax calculator, B4 department name, C1 payroll validator
-- `03_tests/`: B5 functions in a SELECT, and test files for the functions and the validator
-- `screenshots/`: output screenshots for A1, A2, A3, A4, B5 and C1
-- `docs/REFLECTION.md`: reflection (C2)
+salary refers to the **monthly** salary. The data was deliberately created with errors so the validator has something to catch:
+- employees whose salary is 0
+- employees without a department
 
-## How to run
-1. Run `00_setup/create_tables.sql`.
-2. Run the functions in `02_functions/`.
-3. Run the programs in `01_goto/` (use `SET SERVEROUTPUT ON;`).
-4. Run the test files in `03_tests/`.
-5. Verify your results against the screenshots.
+## Oracle Environment Used
+
+- **Database:** Oracle Database
+- **Tool:** Oracle SQL Developer
 
 ## Function notes
-- The functions in the code are named `annual_salary`, `years_of_service`, `calculate_tax`, `dept_name` and `payroll` (the C1 validator).
-- Tax rules (my own scheme): 0 up to 60,000; 20% on the part from 60,000 to 100,000; 8,000 plus 30% of the part above 100,000.
-- The validator `payroll` reports an invalid salary, a missing department, or a missing or future hire date, and otherwise returns a VALID summary.
+- The functions in the code are named **annual-salary**, **years-of-service**, **calculate-tax**,**dept_name** and **payroll**` (the validator).
+- The validator payroll reports an invalid salary, a missing department, or a missing or future hire date, and otherwise returns a VALID summary.
+
+  ## GOTO Statements
+
+- **A1, Number classifier:** classifies a number using GOTO
+- **A2, Salary review:** reviews employee salaries using GOTO
+- **A3, Illegal GOTO and fix:** shows a GOTO that Oracle rejects, then the corrected version.
+- **A4, Rewrite without GOTO:** the same logic restructured with standard control structures.
+
+  ## Functions
+
+  B1 - annual salary:  Converts the monthly salary to an annual figure 
+  B2 - years of  service: Calculates how long an employee has worked 
+  B3 - calculate tax:   Applies the tax scheme below 
+  B4 - department_name:  Returns the department name for an employee
+  
+  ## Validator
+
+  The validator checks each employee and reports:
+  - an invalid salary
+  - a missing department
+  - a missing or future hire date
+
 
 ## Notes
-I used Claude (an AI assistant) for guidance, for debugging errors, and for help with the wording of the reflection and this README. I tested the code myself in Oracle SQL Developer and I am responsible for understanding and explaining all submitted code.
+The codes have been tested using tested Oracle SQL Developer. I used Gemini (AI assistant) for debugging complex errors.
