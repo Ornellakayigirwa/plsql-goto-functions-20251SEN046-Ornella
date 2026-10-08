@@ -18,9 +18,6 @@ salary refers to the **monthly** salary. The data was deliberately created with 
 - **Database:** Oracle Database
 - **Tool:** Oracle SQL Developer
 
-## Function notes
-- The functions in the code are named **annual-salary**, **years-of-service**, **calculate-tax**,**dept_name** and **payroll**` (the validator).
-- The validator payroll reports an invalid salary, a missing department, or a missing or future hire date, and otherwise returns a VALID summary.
 
   ## GOTO Statements
 
@@ -31,10 +28,14 @@ salary refers to the **monthly** salary. The data was deliberately created with 
 
   ## Functions
 
-  B1 - annual salary:  Converts the monthly salary to an annual figure 
-  B2 - years of  service: Calculates how long an employee has worked 
-  B3 - calculate tax:   Applies the tax scheme below 
-  B4 - department_name:  Returns the department name for an employee
+  - B1 annual salary:  Converts the monthly salary to an annual figure 
+  - B2  years of  service: Calculates how long an employee has worked 
+  - B3  calculate tax:   Applies the tax scheme below 
+  - B4  department_name:  Returns the department name for an employee
+    
+   ### Function notes
+- The functions in the code are named **annual-salary**, **years-of-service**, **calculate-tax**,**dept_name** and **payroll**` (the validator).
+- The validator payroll reports an invalid salary, a missing department, or a missing or future hire date, and otherwise returns a VALID summary.
   
   ## Validator
 
